@@ -190,12 +190,12 @@ ul.row {
     display: block;
 }
 
-.social-link svg {
+.social-link > svg {
     color: var(--text-color);
 }
 
 .row::after {
-    content: none;
+    content: '';
     display: table;
     clear: both;
 }
