@@ -208,7 +208,7 @@ ul.row {
     --button-hover-background: var(--color-primary);
 }
 
-.section-footer {
+.footer {
     padding: var(--footer-padding);
 }
 
@@ -249,5 +249,5 @@ html[data-section-theme="dark"] {
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
     background-color: var(--color-black);
-    /* --buttton-color: var(--color-white); */
+    --buttton-color: var(--color-white);
 }
