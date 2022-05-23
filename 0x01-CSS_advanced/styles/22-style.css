@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+[data-section-theme="dark"] {
+    --text-color: var(--color-white);
+    --section-title-color: var(--color-white);
+    background-color: var(--color-black);
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
@@ -191,10 +197,4 @@ ul.row {
 [class^="col-"] {
     float: left;
     padding: .5rem;
-}
-
-html[data-section-theme="dark"] {
-    --text-color: var(--color-white);
-    --section-title-color: var(--color-white);
-    background-color: var(--color-black);
 }
