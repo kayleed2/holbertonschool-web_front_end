@@ -63,7 +63,7 @@
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
     background-color: var(--color-black);
-    --buttton-color: var(--color-white);
+    --button-color: var(--color-white);
 }
 
 html {
@@ -134,7 +134,7 @@ body {
     height: 0.2rem;
 }
 
-.nav .nav-link:hover::before {
+.nav .nav-link:hover .nav-link::before {
     background-color: var(--color-primary);
     width: 100%;
 }
