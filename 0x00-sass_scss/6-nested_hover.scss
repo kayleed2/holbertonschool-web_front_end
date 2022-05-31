@@ -1,0 +1,11 @@
+/* Assigning hover  */
+$colorTwo: #FF0000;
+$hovercolor: #00FF00;
+
+button {
+    color: $colorTwo;
+
+    &:hover {
+        color: $hovercolor;
+    }
+}

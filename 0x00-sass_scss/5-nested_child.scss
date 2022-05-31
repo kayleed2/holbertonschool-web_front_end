@@ -1,0 +1,11 @@
+/* More nesting with variables  */
+$colorOne: #3D3D3D;
+$colorTwo: #FF0000;
+
+body {
+    color: $colorOne;
+
+    > .red {
+        color: $colorTwo;
+    }
+}

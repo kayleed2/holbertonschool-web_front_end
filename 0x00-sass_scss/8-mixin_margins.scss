@@ -1,0 +1,18 @@
+/* Using a mixin */
+@mixin margbod {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@mixin margdiv {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+body {
+    @include margbod();
+}
+
+div {
+    @include margdiv();
+}

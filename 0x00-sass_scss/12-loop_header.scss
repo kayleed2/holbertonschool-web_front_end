@@ -1,0 +1,7 @@
+/* Using for to create h tags */
+
+@for $level from 1 through 5 {
+    h#{$level} {
+        font-size: #{$level}px;
+    }
+}

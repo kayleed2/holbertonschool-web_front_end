@@ -1,0 +1,16 @@
+/* Assigning multiple variables */
+$text: #3D3D3D;
+$backg: #6D6D6D;
+
+body {
+    color: $text;
+    background-color: $backg;
+}
+
+p {
+    color: $text;
+}
+
+h2 {
+    background-color: $backg;
+}
