@@ -645,6 +645,12 @@
     transform: scale(1.2);
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
+
+  .card-work:hover .card-title a {
+    opacity: 1;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
   
   .card-work .card-inner {
     position: absolute;
