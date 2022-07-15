@@ -1,11 +1,11 @@
 class studentHogwarts {
     constructor(privateScore = 0, name = null) {
-        this.privateScore = privateScore;
+        this._privateScore = privateScore;
         this.name = name;
     }
     
     changeScoreBy(points) {
-        this.privateScore += points;
+        this._privateScore += points;
     }
     
     setName(newName) {
@@ -21,7 +21,7 @@ class studentHogwarts {
     }
 
     getScore() {
-        return `${this.name}: ${this.privateScore}`;
+        return `${this.name}: ${this._privateScore}`;
     }
 }
 
