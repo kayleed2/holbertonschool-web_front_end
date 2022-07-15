@@ -4,7 +4,7 @@ class studentHogwarts {
         this.name = name;
     }
     
-    changeScoreBy(points) {
+    #changeScoreBy(points) {
         this._privateScore += points;
     }
     
@@ -13,11 +13,11 @@ class studentHogwarts {
     }
     
     rewardStudent() {
-        this.changeScoreBy(1);
+        this.#changeScoreBy(1);
     }
 
     penalizeStudent() {
-        this.changeScoreBy(-1);
+        this.#changeScoreBy(-1);
     }
 
     getScore() {
