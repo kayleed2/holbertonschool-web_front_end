@@ -20,16 +20,14 @@
 
            function addNewMember(firstname, lastname) {
             $("table tbody").append("<tr>");
-            $("tbody tr:last").addClass(firstname);
-            $("." + firstname).append("<td>");
-            $("." + firstname).append("<td>", "<td>", "<td>");
-            $("." + firstname + " " + "td").eq(0).html(firstname);
-            $("." + firstname + " " + "td").eq(1).html(lastname);
-            $("." + firstname + " " + "td").eq(2).html("(x)");
-            $("." + firstname + " " + "td").eq(2).click(function() {
-                $("." + firstname).remove();
+            $("tbody tr:last").append("<td>", "<td>", "<td>");
+            $("tbody tr:last td").eq(0).html(firstname);
+            $("tbody tr:last td").eq(1).html(lastname);
+            $("tbody tr:last td").eq(2).html("(x)");
+            $("tbody tr:last td").eq(2).click(function() {
+                $("tbody tr:last").remove();
             })
-            $("." + firstname + " " + "td").eq(2).css("background-color", "orange");
+            $("tbody tr:last td").eq(2).css("background-color", "orange");
            }
            createFamilyTree();
            addNewMember("Guillaume", "Salva");
