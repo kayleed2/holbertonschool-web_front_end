@@ -12,23 +12,6 @@
     <body>
         <script type="application/javascript">
            function createFamilyTree() {
-            let table = `<table>
-                            <tr>
-                                <th>Firstname</th>
-                                <th>Lastname</th> 
-                            </tr>
-                            <tr>
-                                <td>Guillaume</td>
-                                <td>Salva</td> 
-                            </tr>
-                            <tr>
-                                <td>Paulette</td>
-                                <td>Salva</td> 
-                            </tr>
-                            <tr>
-                                <td>Antoine</td>
-                                <td>Salva</td>
-                        </table>`;
             $("body").append("<table>", "<tr>", "<tr>", "<tr>", "<tr>");
             $("tr").eq(0).append("<th>", "<th>");
             $("tr th").eq(0).text("Firstname");
