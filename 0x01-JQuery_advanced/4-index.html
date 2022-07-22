@@ -21,6 +21,7 @@
             $("table").append("<tbody>");
             $("tbody").append("<tr>", "<tr>", "<tr>");
 
+
             $("tr").eq(1).append("<td>", "<td>");
             $("tr td").eq(0).text("Guillaume");
             $("tr td").eq(1).text("Salva");
@@ -36,7 +37,7 @@
            createFamilyTree();
              
            function replaceFamilyTree() {
-            $("<tr><td>Gerard</td><td>Bonissa</td></tr>").replaceAll("tbody tr");
+            $("tbody tr").html("<td>Gerard</td><td>Bonissa</td>");
         };
         replaceFamilyTree();
         </script>
