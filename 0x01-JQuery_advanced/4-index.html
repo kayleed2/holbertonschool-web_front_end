@@ -11,7 +11,7 @@
 
     <body>
         <script type="application/javascript">
-          function createFamilyTree() {
+           function createFamilyTree() {
             $("body").append("<table>");
             $("table").append("<tr>");
                 $("tr").eq(0).append("<th>", "<th>");
@@ -34,7 +34,11 @@
             $("tr td").eq(5).text("Salva");
            }
            createFamilyTree();
-       </script>
+             
+           function replaceFamilyTree() {
+            $("<tr><td>Gerard</td><td>Bonissa</td></tr>").replaceAll("tbody tr");
+        };
+        replaceFamilyTree();
+        </script>
     </body>
-
 </html>
