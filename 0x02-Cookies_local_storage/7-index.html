@@ -14,6 +14,8 @@
             createStore();
             displayCart();
         } else {
+            createStore();
+            displayCart();
             alert('Sorry, your browser does not support Web storage. Try again with a better one');
         }
         
@@ -39,9 +41,8 @@
 
         function removeItemfromCart(item) {
             let cart = getCartFromStorage();
-            if(cart[item]) {
-                sessionStorage.removeItem('cart', item);
-            }
+            delete cart[item];
+            sessionStorage.setItem('cart', JSON.stringify(cart));
             displayCart();
         }
 
@@ -67,25 +68,46 @@
         }
 
         function displayCart() {
-            let h2 = document.createElement('h2');
-            h2.innerHTML = "Your cart:"
-            document.body.appendChild(h2);
-            if (!document.getElementById('div')) {
-                let div = document.createElement('div');
-                div.setAttribute('id', 'div');
-                document.body.appendChild(div);
-            } else {
-                div.removeChild(div.firstChild);
-            }
-            updateCart();
-        }
+            if (document.getElementById('cart') == null) {
+					let div = document.createElement('div');
+					div.setAttribute('id', 'cart');
+					let h2 = document.createElement('h2');
+					h2.innerHTML = 'Your cart:';
+					div.append(h2);
+					document.body.append(div);
+				}
+				updateCart();
+			}
 
         function updateCart() {
-            let cart = getCartFromStorage();
-            if (cart === "{}") {
-               alert('Your cart is empty'); 
+				let cart = document.getElementById('cart');
+				let list = document.getElementById('list');
+
+				if (list == null) {
+					let list = document.createElement('ul');
+					list.setAttribute('id', 'list');
+					cart.append(list);
+				}
+				let listRenew = document.getElementById('list');
+				listRenew.innerHTML = "";
+
+				let cartStatus = document.createElement('li');
+				cartStatus.setAttribute('id', 'cartStatus')
+				listRenew.append(cartStatus);
+
+				if (sessionStorage.cart == null){
+					cartStatus.innerHTML = 'Your cart is empty';
+				} else {
+					cartStatus.innerHTML = `<a onclick="clearCart()">Clear my cart</a>`;
+
+					let cart = getCartFromStorage();
+					for (item in cart) {
+						let li = document.createElement('li');
+						li.innerHTML = `${item} x ${cart[item]} <a onclick="removeItemfromCart('${item}')">remove</a>`;
+						listRenew.append(li);
+					}
+				}
             }
-        }
     </script>
 </body>
 </html>
